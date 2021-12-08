@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('properties', PropertyController::class);
+Route::resource('agents', AgentController::class);

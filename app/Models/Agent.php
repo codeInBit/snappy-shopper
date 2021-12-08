@@ -35,6 +35,7 @@ class Agent extends Model
      */
     public function properties()
     {
-        return $this->belongsToMany('App\Models\Property');
+        return $this->belongsToMany('App\Models\Property', 'agent_property', 'agent_id', 'property_id')
+            ->withPivot('role')->withTimestamps();
     }
 }

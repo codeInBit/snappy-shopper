@@ -1,0 +1,29 @@
+{
+	"Properties": [
+		{
+			"name": "Olan 1",
+			"price": "2000",
+			"type": "flat"
+		},
+		{
+			"name": "Olan 2",
+			"price": "2000",
+			"type": "flat"
+		},
+		{
+			"name": "Olan 3",
+			"price": "2000",
+			"type": "flat"
+		},
+		{
+			"name": "Olan 4",
+			"price": "2000",
+			"type": "flat"
+		},
+		{
+			"name": "Olan 5",
+			"price": "2000",
+			"type": "flat"
+		}
+	]
+}

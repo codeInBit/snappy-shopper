@@ -15,11 +15,5 @@ use Symfony\Component\HttpFoundation\Response;
 */
 
 Route::get('/', function () {
-    return response()->json(
-        [
-            "success" => true,
-            "message" => "Hey, you shouldn't be here :)"
-        ],
-        Response::HTTP_OK
-    );
+    return view('welcome');
 });

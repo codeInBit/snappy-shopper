@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="SimpleStream" namespace="MyProject\CS\Standard">
-    <description>SimpleStream coding standard</description>
+<ruleset name="SnappyShopper" namespace="MyProject\CS\Standard">
+    <description>SnappyShopper coding standard</description>
     <arg name="colors"/><!-- add colors cli parameter by default -->
 
     <!--

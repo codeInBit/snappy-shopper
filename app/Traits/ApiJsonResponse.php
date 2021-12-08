@@ -12,7 +12,7 @@ use Throwable;
 trait ApiJsonResponse
 {
     /**
-     * @param string $data
+     * @param string|mixed $data
      * @param mixed $message
      * @param int $statusCode
      * @return JsonResponse
@@ -30,8 +30,28 @@ trait ApiJsonResponse
         return response()->json($response, $statusCode);
     }
 
+    public function datatableResponse($query, string $resources)
+    {
+        $data = DatatableForResource::make($query, $resources);
+
+        if ($data instanceof BinaryFileResponse) {
+            return $data;
+        }
+
+        $response = [
+            "success" => true,
+            "message" => "Data fetched successfuly"
+        ];
+
+        if ($data) {
+            $response["data"] = $data['data']['data'];
+            $response["metadata"] = $data['metadata'];
+        }
+        return response()->json($response, Response::HTTP_OK);
+    }
+
     /**
-     * @param string $data
+     * @param string|mixed $data
      * @param mixed $message
      * @param int $statusCode
      * @return JsonResponse
